@@ -9,6 +9,8 @@ avocado = pd.read_csv('Data/avocado-updated-2020.csv')
 # Create the Dash app
 app = Dash()
 
+# Added line from dash render tutorial
+server = app.server
 # Set up the app layout
 geo_dropdown = dcc.Dropdown(options=avocado['geography'].unique(),
                             value='New York')
