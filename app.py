@@ -11,6 +11,7 @@ app = Dash()
 
 # Added line from dash render tutorial
 server = app.server
+
 # Set up the app layout
 geo_dropdown = dcc.Dropdown(options=avocado['geography'].unique(),
                             value='New York')
@@ -20,7 +21,6 @@ app.layout = html.Div(children=[
     geo_dropdown,
     dcc.Graph(id='price-graph')
 ])
-
 
 # Set up the callback function
 @app.callback(
